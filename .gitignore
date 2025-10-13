@@ -1,0 +1,21 @@
+# --- General Python/Virtual Environments ---
+# Compiled python files
+__pycache__/
+*.pyc
+# Virtual environments
+venv/
+.venv
+
+# --- Jupyter Notebooks & IDEs ---
+# Backup/checkpoint files created by Jupyter/Colab
+.ipynb_checkpoints/
+# Visual Studio Code settings
+.vscode/
+
+# --- Operating System Files ---
+# Mac OS temporary files
+.DS_Store
+
+# --- Generated Data/Results ---
+# Ignore large generated data files
+DATA/*.csv

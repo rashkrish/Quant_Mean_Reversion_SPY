@@ -1,15 +1,14 @@
 Quant_Mean_Reversion_SPY/
 |
 ├── DATA/
-│   ├── SPY.csv              <- Raw price data (optional, but good practice)
-│   └── strategy_data_SPY.csv  <- Final strategy output file
+│   └── strategy_data_SPY.csv  
 |
 ├── NOTEBOOKS/
-│   └── SPY_Mean_Reversion_Analysis.ipynb  <- (All your Colab cells combined)
+│   └── SPY_Mean_Reversion_Analysis.ipynb 
 |
 ├── RESULTS/
-│   ├── results_final_metrics.txt      <- Text file with the final performance metrics.
-│   └── results_equity_curve.png       <- Final chart image.
+│   ├── results_final_metrics.txt      
+│   └── results_equity_curve.png       
 |
-├── README.md
+├── README.md                    
 └── LICENSE

@@ -1,0 +1,10 @@
+==================================================
+FINAL SPY MEAN REVERSION PERFORMANCE:
+==================================================
+Total Return                  : 1.84%
+Annualized Return             : 0.44%
+Annualized Volatility         : 3.03%
+Sharpe Ratio (Annualized)     : 0.14
+Maximum Drawdown              : 2.90%
+Total Trades                  : 8.0
+==================================================

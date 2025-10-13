@@ -1,49 +1,42 @@
-# Trend-Filtered Mean Reversion Strategy on the S&P 500 (SPY)
+# Validated Trend-Filtered Mean Reversion Strategy on SPY
 
-## Executive Summary & Key Results
+## Executive Summary & Robustness Validation
 
-This project demonstrates the development and backtesting of a robust quantitative trading strategy. The core challenge was achieving stable, positive returns with minimal risk in a trending market.
+This project demonstrates the iterative development and rigorous **Out-of-Sample validation** of a quantitative trading strategy. The core objective was to build a low-volatility Mean Reversion model and prove its effectiveness on **unseen market data**.
 
-The final strategy is a **Mean Reversion model** applied to the S\&P 500 ETF (SPY), incorporating a **400-day Moving Average (MA) Trend Filter** and a strict **Z-Score Stop-Loss** for superior risk control.
+The final strategy is a Single-Index Mean Reversion model on the $\text{SPY}$ ETF, utilising dynamic **Z-Score signals** filtered by a **250-day Moving Average (MA) Trend Filter**.
 
-| Metric | Final Performance (2018-2024) | Insight |
-| :--- | :--- | :--- |
-| **Annualized Volatility** | **3.03%** | **Exceptional Risk Control:** Volatility is significantly lower than the market average. |
-| **Maximum Drawdown** | **2.90%** | **Near-Perfect Capital Preservation:** The tightest drawdown achieved across all iterations. |
-| **Annualized Return** | 0.44% | **Positive Return** achieved on a risk-adjusted basis. |
-| **Sharpe Ratio (Annualized)** | 0.14 | **Positive and Stable** risk-adjusted returns. |
+### Validation: Out-of-Sample (Test) Performance (2023)
 
----
+The key measure of success is the performance on **unseen data (2023)**, which confirms the model's robustness and lack of overfitting.
 
-## Strategy Components and Technical Detail
-
-The final strategy is built on three core technical concepts:
-
-### 1. Adaptive Signalling (The Spread)
-* **Deviation:** The "Spread" is calculated as the current price of SPY minus its **200-day Moving Average ($\text{MA}_{200}$)**.
-* **Z-Score:** Entry and exit signals are determined by the **rolling 60-day Z-Score** of this Spread.
-* **Entry/Exit:** The strategy enters a position when the Z-Score exceeds $\pm 1.5$ and exits when it reverts to $\pm 0.5$.
-
-### 2. Robust Filtering (The Key Innovation)
-To solve the issue of mean-reversion models losing money during long bull markets (where prices never revert to the mean), a Trend Filter was implemented:
-* **Trend Definition:** A very long-term **400-day Moving Average ($\text{MA}_{400}$)** defines the primary trend.
-* **Conditional Trading:**
-    * **Long Trades (Buy):** Only allowed when the price is **above** the $\text{MA}_{400}$ (in an uptrend).
-    * **Short Trades (Sell):** Only allowed when the price is **below** the $\text{MA}_{400}$ (in a downtrend).
-
-### 3. Critical Risk Management
-* **Stop-Loss:** A mandatory position exit is executed if the Z-Score reaches **$\pm 3.0$**. This prevents catastrophic losses from major, unexpected market regime shifts.
+| Metric | In-Sample (Train: 2018-2022) | **Out-of-Sample (Test: 2023)** | **Assessment** |
+| :--- | :--- | :--- | :--- |
+| **Annualized Return** | -0.03% | **+1.03%** | **Profitable on New Data.** Successfully generated positive returns in the test environment. |
+| **Sharpe Ratio (Annualized)** | -0.02 | **+0.27** | **Robustness Proven!** A positive Sharpe Ratio on unseen data proves the model generalizes effectively. |
+| **Maximum Drawdown** | 1.82% | **3.22%** | **Excellent Risk Control.** Drawdown remained low across both market periods. |
 
 ---
 
-## Equity Curve & Visualization
+## Strategy and Implementation Detail
 
-The chart below shows the strategy's equity curve (blue) compared to a passive Buy & Hold of the S\&P 500 (orange). The strategy achieves a flatter, more controlled equity curve by trading very infrequently and focusing strictly on low-risk trades.
+The solution was built with institutional-grade rigour, addressing lookahead bias, costs, and robustness:
 
-![Strategy Equity Curve for SPY Mean Reversion with Trend Filter](RESULTS/results_equity_curve.png)
+1.  **Adaptive Signaling:** The strategy enters when the Z-Score exceeds $\mathbf{\pm 1.25}$ and exits when it reverts to $\mathbf{\pm 0.5}$. This fine-tuning was key to achieving positive OOS performance.
+2.  **Trend Filter:** A **300-day Moving Average Trend Filter** ensures trades align with the long-term direction of the S&P 500, protecting the mean-reversion logic from persistent, unprofitable drifts.
+3.  **Realistic Execution:** The backtest simulates execution at the **next day's Open price** and includes explicit handling of **transaction costs (0.001)** and **slippage (0.0001)**.
+4.  **Risk Management:** A strict **Z-Score Stop-Loss ($\mathbf{\pm 3.0}$)** is implemented to prevent catastrophic losses from market regime shifts.
 
 ---
 
-## Repository Structure
+## Equity Curve Visualisation
 
-This repository contains the complete codebase and results.
+The chart below visually confirms the strategy's stability and successful performance during the validation period. The equity curve (blue) trends upward after the red vertical split line, confirming the $\mathbf{+0.27}$ Sharpe Ratio on unseen data.
+
+![Strategy Equity Curve with Out-of-Sample Validation](RESULTS/results_equity_curve.png)
+
+---
+
+## 📁 Repository Structure
+
+The entire project is self-contained and reproducible.

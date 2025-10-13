@@ -1,10 +1,38 @@
+-> Strategy data loaded successfully. (SPY)
+
+-> Train Period: 2018-12-28 to 2022-12-30
+-> Test Period: 2023-01-03 to 2023-12-29
+-> Backtest simulation completed.
+
 ==================================================
-FINAL SPY MEAN REVERSION PERFORMANCE:
+IN-SAMPLE (TRAIN) PERFORMANCE:
 ==================================================
-Total Return                  : 1.84%
-Annualized Return             : 0.44%
-Annualized Volatility         : 3.03%
-Sharpe Ratio (Annualized)     : 0.14
-Maximum Drawdown              : 2.90%
-Total Trades                  : 8.0
+Total Return                  : -0.11%
+Annualized Return             : -0.03%
+Annualized Volatility         : 1.72%
+Sharpe Ratio (Annualized)     : -0.02
+Maximum Drawdown              : 1.82%
+Total Trades                  : 3.5
+==================================================
+
+==================================================
+OUT-OF-SAMPLE (TEST) PERFORMANCE:
+==================================================
+Total Return                  : 1.02%
+Annualized Return             : 1.03%
+Annualized Volatility         : 3.80%
+Sharpe Ratio (Annualized)     : 0.27
+Maximum Drawdown              : 3.22%
+Total Trades                  : 5.5
+==================================================
+
+==================================================
+FULL PERIOD (2018-2024) PERFORMANCE:
+==================================================
+Total Return                  : 1.02%
+Annualized Return             : 0.21%
+Annualized Volatility         : 2.31%
+Sharpe Ratio (Annualized)     : 0.09
+Maximum Drawdown              : 3.22%
+Total Trades                  : 9.0
 ==================================================

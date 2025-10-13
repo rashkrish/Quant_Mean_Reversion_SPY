@@ -19,7 +19,7 @@ The final strategy is a **Mean Reversion model** applied to the S\&P 500 ETF (SP
 
 The final strategy is built on three core technical concepts:
 
-### 1. Adaptive Signaling (The Spread)
+### 1. Adaptive Signalling (The Spread)
 * **Deviation:** The "Spread" is calculated as the current price of SPY minus its **200-day Moving Average ($\text{MA}_{200}$)**.
 * **Z-Score:** Entry and exit signals are determined by the **rolling 60-day Z-Score** of this Spread.
 * **Entry/Exit:** The strategy enters a position when the Z-Score exceeds $\pm 1.5$ and exits when it reverts to $\pm 0.5$.

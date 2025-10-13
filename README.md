@@ -43,6 +43,6 @@ The chart below visually confirms the strategy's stability. The blue equity curv
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 The entire project is contained within a single reproducible notebook.

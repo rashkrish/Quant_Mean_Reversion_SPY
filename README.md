@@ -44,6 +44,6 @@ The chart below shows the strategy's equity curve (blue) compared to a passive B
 
 ---
 
-## 🛠️ Repository Structure
+## Repository Structure
 
 This repository contains the complete codebase and results.

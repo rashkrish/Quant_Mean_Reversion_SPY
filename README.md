@@ -37,6 +37,6 @@ The chart below visually confirms the strategy's stability and successful perfor
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 The entire project is self-contained and reproducible.

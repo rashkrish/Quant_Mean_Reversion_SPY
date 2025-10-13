@@ -1,14 +1,14 @@
 Quant_Mean_Reversion_SPY/
 |
 ├── DATA/
-│   └── strategy_data_SPY.csv  
+│   └── strategy_data_SPY.csv 
 |
 ├── NOTEBOOKS/
-│   └── SPY_Mean_Reversion_Analysis.ipynb 
+│   └── SPY_Mean_Reversion_Analysis.ipynb  
 |
 ├── RESULTS/
 │   ├── results_final_metrics.txt      
 │   └── results_equity_curve.png       
 |
-├── README.md                    
+├── README.md
 └── LICENSE

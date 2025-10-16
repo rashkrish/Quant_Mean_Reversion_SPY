@@ -21,7 +21,7 @@ The success is measured by the performance on the **unseen 2023 market data**, c
 
 ## Strategy and Implementation Detail
 
-The backtesting pipeline incorporates institutional-grade realism and advanced risk controls:
+The backtesting framework integrates realistic market conditions and robust risk controls.
 
 ### 1. Adaptive Signaling and Optimization
 * **Entry:** Trades are initiated when the Z-Score exceeds $\mathbf{\pm 1.25}$, signaling a strong deviation from the mean.

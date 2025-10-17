@@ -1,4 +1,4 @@
-# Validated Trend-Filtered Mean Reversion Strategy on SPY
+# Trend-Filtered Mean Reversion Strategy on SPY
 
 ## Executive Summary & Robustness Validation
 
